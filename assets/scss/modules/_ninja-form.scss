@@ -1,0 +1,54 @@
+// ===============================================================
+// Ninja forms styling
+// ===============================================================
+
+.content {
+	.nf-form-content {
+		padding: 0;
+		margin: 0 0 var(--space-xlarge);
+	}
+
+	.nf-form-fields-required {
+		margin-bottom: var(--space-small);
+	}
+
+	.nf-form-content label {
+		font-style: var(--font-small);
+		font-weight: 400;
+		line-height: 1;
+	}
+
+	.nf-error .nf-error-msg {
+		margin-bottom: var(--space-small);
+	}
+
+	.nf-form-content .list-select-wrap .nf-field-element > div,
+	.nf-form-content input:not([type="button"]),
+	.nf-form-content textarea {
+		background: $color-grey-background;
+		border: 1px solid #999;
+		border-radius: 0;
+		box-shadow: none;
+		color: #666;
+		transition: all 0.5s;
+	}
+
+	.nf-form-content button,
+	.nf-form-content input[type="button"],
+	.nf-form-content input[type="submit"] {
+		background: $color-black;
+		border: 0;
+		color: $color-white;
+		transition: all 0.5s;
+		height: auto;
+		text-transform: uppercase;
+		font-weight: 700;
+		min-width: 120px;
+
+		&:hover {
+			cursor: pointer;
+			color: $color-black;
+			background: $color-primary;
+		}
+	}
+}

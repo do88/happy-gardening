@@ -1,0 +1,142 @@
+// ===============================================================
+// Content layout and styling
+// ===============================================================
+
+// Layout styling rules
+.content {
+	.content--contained {
+		@include constrain($max-width-large);
+		margin-bottom: var(--space-xxlarge);
+	}
+
+	.content--two-column {
+		display: grid;
+		grid-gap: var(--grid-gap);
+		grid-template-columns: 1fr;
+
+		@include mq(tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	.content--two-column-sidebar {
+		display: grid;
+		grid-gap: var(--grid-gap);
+		grid-template-columns: 1fr;
+
+		@include mq(tablet) {
+			grid-template-columns: minmax(450px, 1fr) minmax(200px, 400px);
+		}
+	}
+}
+
+// Styling for any content output from the wordpress editor
+.page-content {
+	background: $color-white;
+	padding: var(--space-xlarge);
+	@include box-shadow-large();
+
+	// Set vertical rhythm for page content
+	> *:not(:last-child) {
+		margin-bottom: var(--space-medium);
+	}
+
+	a {
+		text-decoration: none;
+		color: $color-third;
+		font-weight: 400;
+		border-bottom: 2px solid transparent;
+		@include transition;
+
+		&:hover {
+			color: $color-black;
+			border-bottom: 2px solid $color-black;
+		}
+	}
+
+	h2 {
+		font-weight: 700;
+	}
+
+	h3 {
+		font-weight: 400;
+	}
+
+	h4 {
+		color: $color-third;
+		font-weight: 400;
+	}
+
+	ul {
+		font-style: var(--font-small);
+
+		li {
+			list-style: none;
+			position: relative;
+			padding: 0 0 0 20px;
+			margin-bottom: var(--space-xsmall);
+			padding-bottom: var(--space-xsmall);
+			border-bottom: 1px solid rgba(black, 0.1);
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 5px;
+				top: 10px;
+				width: 7px;
+				height: 7px;
+				background-color: $color-secondary;
+				border-radius: 50%;
+				-moz-border-radius: 50%;
+				-webkit-border-radius: 50%;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ol {
+		font-style: var(--font-small);
+		list-style-position: inside;
+
+		li {
+			position: relative;
+			margin-bottom: var(--space-xsmall);
+			padding-bottom: var(--space-xsmall);
+			border-bottom: 1px solid rgba(black, 0.1);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	em {
+		border: 0;
+	}
+
+	.two-column-grid {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr;
+
+		@include mq(desktop) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		> div > *:not(:last-child) {
+			margin-bottom: var(--space-medium);
+		}
+	}
+
+	.wp-caption {
+		width: 100% !important;
+
+		.wp-caption-text {
+			padding-top: var(--space-small);
+			font-style: var(--font-small);
+		}
+	}
+}

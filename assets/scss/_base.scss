@@ -1,0 +1,217 @@
+// ===============================================================
+// https://github.com/hankchizljaw/modern-css-reset + Custom Reset
+// ===============================================================
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	border: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	border: 0;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $font-primary;
+	color: $color-grey-dark;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: 1.6rem;
+	background: $color-grey-background;
+}
+
+main {
+	flex: 1;
+}
+
+//Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+//Remove link underlines
+a {
+	text-decoration: none;
+}
+
+//Make images easier to work with
+img,
+picture {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+//Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+//Sizing for SVG elements
+.svg-wrapper {
+	overflow: hidden;
+	display: inline-flex;
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// ===============================================================
+// Accessibility
+// ===============================================================
+
+//Text meant only for screen readers.
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+//Do not show the outline on the skip link target.
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+// Hidden class
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+//Remove all animations and transitions for people that prefer not to see them
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+// ===============================================================
+// Typography
+// ===============================================================
+
+h1 {
+	font-weight: 300;
+	line-height: 1.25;
+	font-style: var(--font-xlarge);
+}
+
+h2 {
+	font-weight: 300;
+	line-height: 1.35;
+	font-style: var(--font-large);
+}
+
+h3 {
+	font-weight: 400;
+	line-height: 1.4;
+	font-style: var(--font-medium);
+}
+
+h4 {
+	font-weight: 700;
+	line-height: 1.4;
+	font-style: var(--font-small);
+}
+
+p {
+	line-height: 1.55;
+	font-style: var(--font-small);
+}
+
+// ===============================================================
+// Button
+// ===============================================================
+
+.button {
+	cursor: pointer;
+	min-width: 120px;
+	display: inline-flex;
+	align-items: center;
+	border: none;
+	padding: var(--space-medium);
+	margin: 0;
+	text-decoration: none;
+	color: $color-white;
+	font-style: var(--font-small);
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	background: $color-black;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	@include transition();
+
+	&:hover {
+		background: $color-primary;
+		color: $color-black;
+
+		.svg-wrapper svg {
+			fill: $color-black;
+		}
+	}
+
+	.svg-wrapper {
+		width: 15px;
+		height: 15px;
+		margin-left: var(--space-small);
+
+		svg {
+			fill: $color-white;
+			@include transition();
+		}
+	}
+}

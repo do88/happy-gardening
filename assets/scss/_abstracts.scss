@@ -1,0 +1,174 @@
+// ===============================================================
+// MIXINS AND FUNCTIONS
+// ===============================================================
+
+@mixin constrain($width) {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 0 var(--space-medium);
+
+	@include mq(mobileLarge) {
+		max-width: 700px;
+		padding: 0 var(--space-large);
+	}
+
+	@include mq(tablet) {
+		padding: 0 var(--space-large);
+		max-width: $width;
+	}
+
+	@include mq(desktop) {
+		padding: 0 var(--space-xlarge);
+	}
+}
+
+@mixin box-shadow-small {
+	box-shadow: 0 10px 25px 5px rgba(black, 0.1);
+}
+
+@mixin box-shadow-large {
+	box-shadow: 0 10px 50px 5px rgba(black, 0.1);
+}
+
+@mixin transition($time: 0.2s) {
+	transition: all $time ease-out;
+}
+
+// Use px values for width and height
+@mixin ratio-box($width, $height) {
+	display: none;
+	height: 0;
+	overflow: hidden;
+	padding-top: $width / $height * 100%;
+	position: relative;
+}
+
+@mixin absolute-center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+}
+
+// ===============================================================
+// FONTS
+// ===============================================================
+
+// @font-face {
+// 	font-family: "HelveticaSwitch";
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	font-display: swap; /* Read next point */
+// 	unicode-range: U+000-5FF; /* Download only latin glyphs */
+// 	src: url("../../assets/fonts/HelveticaNeue.woff2") format("woff2"),
+// 		url("../../assets/fonts/HelveticaNeue.woff") format("woff");
+// }
+
+// @font-face {
+// 	font-family: "HelveticaSwitch";
+// 	font-weight: 700;
+// 	font-style: normal;
+// 	font-display: swap; /* Read next point */
+// 	unicode-range: U+000-5FF; /* Download only latin glyphs */
+// 	src: url("../../assets/fonts/HelveticaNeue-Bold.woff2") format("woff2"),
+// 		url("../../assets/fonts/HelveticaNeue-Bold.woff") format("woff");
+// }
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap");
+
+// ===============================================================
+// SASS VARIABLES
+// ===============================================================
+
+// Colors brands
+$color-primary: #074129;
+$color-secondary: #654B10;
+$color-third: #FAF2DF;
+
+// Colors generic
+$color-white: #fff;
+$color-black: #000;
+$color-grey-dark: #333;
+$color-grey-background: #f2f2f2;
+
+// Menu header
+$mobile-header-height: 60px;
+$desktop-header-height: 80px;
+
+// Layout
+$max-width-small: 45em; // 720px
+$max-width-large: 81.25em; // 1300px
+
+// Z-Index
+$z-index-header: 50;
+$z-index-menu: 30;
+$z-index-modal: 999;
+
+// Fonts
+$font-primary: "Mulish", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// ===============================================================
+// CSS ROOT VARIABLES
+// ===============================================================
+
+:root {
+	// Global spacing
+	--space-scale-base: 0.7rem;
+
+	@include mq(mobileLarge) {
+		--space-scale-base: 0.8rem;
+	}
+	@include mq(desktop) {
+		--space-scale-base: 1rem;
+	}
+
+	--space-xxsmall: calc(var(--space-scale-base) * 0.5);
+	--space-xsmall: calc(var(--space-scale-base) * 1);
+	--space-small: calc(var(--space-scale-base) * 2);
+	--space-medium: calc(var(--space-scale-base) * 3);
+	--space-large: calc(var(--space-scale-base) * 4);
+	--space-xlarge: calc(var(--space-scale-base) * 6);
+	--space-xxlarge: calc(var(--space-scale-base) * 8);
+
+	// Type scale
+	--font-xxsmall: 1.2rem;
+	--font-xsmall: 1.2rem;
+	--font-small: 1.6rem;
+	--font-medium: 2rem;
+	--font-large: 2.4rem;
+	--font-xlarge: 2.8rem;
+	--font-xxlarge: 3.4rem;
+
+	@include mq(mobileLarge) {
+		--font-xxsmall: 1.2rem;
+		--font-xsmall: 1.4rem;
+		--font-small: 1.8rem;
+		--font-medium: 2.2rem;
+		--font-large: 2.8rem;
+		--font-xlarge: 3rem;
+		--font-xxlarge: 4.5rem;
+	}
+
+	@include mq(desktop) {
+		--font-xxsmall: 1.4rem;
+		--font-xsmall: 1.6rem;
+		--font-small: 2rem;
+		--font-medium: 2.4rem;
+		--font-large: 3.6rem;
+		--font-xlarge: 4rem;
+		--font-xxlarge: 5.6rem;
+	}
+
+	// CSS grid gap
+	--grid-gap: 1.5rem;
+
+	@include mq(tablet) {
+		--grid-gap: 2.5rem;
+	}
+	@include mq(desktop) {
+		--grid-gap: 4rem;
+	}
+}
