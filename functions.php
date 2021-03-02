@@ -18,7 +18,7 @@ require get_template_directory() . '/includes/disable-comments.php';
 require get_template_directory() . '/includes/tgm/class-tgm-plugin-activation.php';
 require get_template_directory() . '/includes/tgm/tgm-plugins.php';
 
-// require get_template_directory() . '/includes/media.php';
+require get_template_directory() . '/includes/media.php';
 // require get_template_directory() . '/includes/shortcodes.php';
 // require get_template_directory() . '/includes/search-widget.php';
 // require get_template_directory() . '/includes/widgets.php';

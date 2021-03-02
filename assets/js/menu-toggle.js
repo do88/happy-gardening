@@ -1,27 +1,26 @@
 // JS for controlling the menu and overlay
 
-const TOGGLE = document.querySelector("#toggle");
-const OVERLAY = document.querySelector("#overlay");
-const BODY = document.querySelector("body");
+const toggle = document.querySelector("#toggle");
+const overlay = document.querySelector("#overlay");
 
 document.addEventListener("DOMContentLoaded", function () {
-	if (TOGGLE && OVERLAY) {
-		TOGGLE.addEventListener("click", () => {
+	if (toggle && overlay) {
+		toggle.addEventListener("click", () => {
 
 			// Control the menu button active status
-			TOGGLE.classList.toggle("active");
+			toggle.classList.toggle("active");
 
 			// Control the aria label
-			const open = JSON.parse(OVERLAY.getAttribute("aria-expanded"));
-			OVERLAY.setAttribute("aria-expanded", ! open);
+			const open = JSON.parse(overlay.getAttribute("aria-expanded"));
+			overlay.setAttribute("aria-expanded", ! open);
 
 			// Control overlay opening and closing
-			OVERLAY.classList.toggle("open");
+			overlay.classList.toggle("open");
 
 			// Control the body scrolling when overlay open
-			BODY.classList.toggle("menu-active");
+			document.body.classList.toggle("menu-active");
 		});
 	}
 
-	OVERLAY.classList.toggle("menu-open");
+	overlay.classList.toggle("menu-open");
 });

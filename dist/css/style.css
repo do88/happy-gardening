@@ -88,19 +88,7 @@ p{line-height:1.55;font-style:var(--font-small)}
 .headroom--unpinned{-webkit-transform:translateY(-100%);transform:translateY(-100%)}
 html,body{scroll-padding-top:80px}
 @media(min-width:50em){html,body{scroll-padding-top:100px}
-}.banner{position:relative;width:100%;height:150px;margin-top:60px;margin-bottom:var(--space-large)}
-@media(min-width:50em){.banner{height:175px;margin-bottom:var(--space-xxlarge)}
-}@media(min-width:62.5em){.banner{margin-top:80px}
-}.banner .banner__title{width:100%;max-width:500px;margin:0 auto;padding:0 var(--space-medium);height:100%;position:relative}
-@media(min-width:37.5em){.banner .banner__title{max-width:700px;padding:0 var(--space-large)}
-}@media(min-width:50em){.banner .banner__title{padding:0 var(--space-large);max-width:81.25em}
-}@media(min-width:62.5em){.banner .banner__title{padding:0 var(--space-xlarge)}
-}.banner .banner__title h1{position:absolute;left:var(--space-large);bottom:var(--space-large);font-weight:400;color:#fff;font-style:var(--font-xlarge);display:inline-block;line-height:1.2}
-@media(min-width:50em){.banner .banner__title h1{bottom:-35px;color:#000;background:#fff;padding:var(--space-medium);-webkit-box-shadow:0 10px 50px 5px rgba(0,0,0,0.1);box-shadow:0 10px 50px 5px rgba(0,0,0,0.1)}
-}.banner .banner__image{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}
-.banner .banner__image:after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:#654b10;mix-blend-mode:multiply}
-.banner .banner__image img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-webkit-filter:grayscale(100%);filter:grayscale(100%)}
-.content .content--contained{width:100%;max-width:500px;margin:0 auto;padding:0 var(--space-medium);margin-bottom:var(--space-xxlarge)}
+}.content .content--contained{width:100%;max-width:500px;margin:0 auto;padding:0 var(--space-medium);margin-bottom:var(--space-xxlarge)}
 @media(min-width:37.5em){.content .content--contained{max-width:700px;padding:0 var(--space-large)}
 }@media(min-width:50em){.content .content--contained{padding:0 var(--space-large);max-width:81.25em}
 }@media(min-width:62.5em){.content .content--contained{padding:0 var(--space-xlarge)}

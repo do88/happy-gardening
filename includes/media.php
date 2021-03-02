@@ -16,6 +16,7 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 // Add additional image sizes
 add_image_size('banner-image', 1800, 770, true);
+add_image_size('post-thumb', 800, 450, true);
 
 // Register the new image sizes for use in the add media modal in wp-admin
 // function foundationpress_custom_sizes( $sizes ) {
