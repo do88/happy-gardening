@@ -43,7 +43,9 @@ $home_posts_exclude = []; ?>
 	array_push($home_posts_exclude, $banner_post->ID); // add post to exclude array ?>
 	<a href="<?php the_permalink($banner_post->ID) ?>" class="banner-post">
 		<?php echo get_the_category_list(); ?>
-		<h2 class="banner-post__title"><?php echo get_the_title($banner_post->ID) ?></h2>
+		<h2 class="banner-post__title">
+			<?php echo get_the_title($banner_post->ID) ?>
+		</h2>
 		<?php echo get_the_post_thumbnail($featured_post->ID, 'banner-image'); ?>
 	</a>
 	<?php endif; ?>

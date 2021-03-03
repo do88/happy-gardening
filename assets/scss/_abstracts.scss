@@ -57,27 +57,11 @@
 // FONTS
 // ===============================================================
 
-// @font-face {
-// 	font-family: "HelveticaSwitch";
-// 	font-weight: 400;
-// 	font-style: normal;
-// 	font-display: swap; /* Read next point */
-// 	unicode-range: U+000-5FF; /* Download only latin glyphs */
-// 	src: url("../../assets/fonts/HelveticaNeue.woff2") format("woff2"),
-// 		url("../../assets/fonts/HelveticaNeue.woff") format("woff");
-// }
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap");
 
-// @font-face {
-// 	font-family: "HelveticaSwitch";
-// 	font-weight: 700;
-// 	font-style: normal;
-// 	font-display: swap; /* Read next point */
-// 	unicode-range: U+000-5FF; /* Download only latin glyphs */
-// 	src: url("../../assets/fonts/HelveticaNeue-Bold.woff2") format("woff2"),
-// 		url("../../assets/fonts/HelveticaNeue-Bold.woff") format("woff");
-// }
-
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap");
+// Fonts
+$font-primary: "Source Sans Pro", sans-serif;
+$font-secondary: "Playfair Display", serif;
 
 // ===============================================================
 // SASS VARIABLES
@@ -85,8 +69,8 @@
 
 // Colors brands
 $color-primary: #074129;
-$color-secondary: #654B10;
-$color-third: #FAF2DF;
+$color-secondary: #654b10;
+$color-third: #faf2df;
 
 // Colors generic
 $color-white: #fff;
@@ -95,8 +79,8 @@ $color-grey-dark: #333;
 $color-grey-background: #f2f2f2;
 
 // Menu header
-$mobile-header-height: 60px;
-$desktop-header-height: 80px;
+$mobile-header-height: 70px;
+$desktop-header-height: 100px;
 
 // Layout
 $max-width-small: 45em; // 720px
@@ -106,9 +90,6 @@ $max-width-large: 81.25em; // 1300px
 $z-index-header: 50;
 $z-index-menu: 30;
 $z-index-modal: 999;
-
-// Fonts
-$font-primary: "Mulish", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // ===============================================================
 // CSS ROOT VARIABLES

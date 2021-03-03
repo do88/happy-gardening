@@ -3,16 +3,9 @@
 // ===============================================================
 
 .header {
-	z-index: $z-index-menu;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: $color-white;
-	@include box-shadow-small();
 
 	.header__wrapper {
-		@include constrain($max-width-large);
+		padding: 0 var(--space-xxlarge);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -25,13 +18,9 @@
 
 	.header__logo {
 		display: inline-block;
-		flex: 0 1 120px;
-		height: 40px;
+		flex: 0 1 310px;
+		height: 55px;
 		margin-right: var((--space-medium));
-
-		@include mq(desktop) {
-			flex: 0 1 120px;
-		}
 	}
 
 	.header__menu-button {
@@ -72,30 +61,30 @@ body.menu-active {
 		display: block;
 		height: 100%;
 		position: relative;
-		margin-left: var(--space-medium);
+		margin-left: var(--space-xsmall);
 	}
 	.menu-item a {
 		display: flex;
 		align-items: center;
+		padding: 0 2.5rem;
 		height: 100%;
 		white-space: nowrap;
-		text-transform: uppercase;
-		font-style: var(--font-small);
-		color: $color-black;
-		font-weight: 700;
+		font-size: var(--font-small);
+		color: $color-primary;
 		border-bottom: 4px solid transparent;
 		@include transition();
 
 		&:hover {
-			border-bottom: 4px solid $color-black;
+			background: $color-third;
+			border-bottom: 4px solid $color-primary;
 		}
 	}
-	>.menu-item.menu-button  {
+	> .menu-item.menu-button {
 		display: flex;
 		align-items: center;
 		height: 100%;
 	}
-	>.menu-item.menu-button a {
+	> .menu-item.menu-button a {
 		height: auto;
 		background: $color-black;
 		color: $color-white;
@@ -242,8 +231,7 @@ body.menu-active {
 			padding-bottom: var(--space-large);
 			color: $color-white;
 			text-decoration: none;
-			font-style: var(--font-small);
-			text-transform: uppercase;
+			font-size: var(--font-small);
 			letter-spacing: 2px;
 			border-bottom: 1px solid rgba(white, 0.2);
 		}
