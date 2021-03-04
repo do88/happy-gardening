@@ -12,6 +12,7 @@ $home_posts_exclude = []; ?>
 		<h2 class="home-banner__title">
 			<a href="<?php the_permalink($featured_post->ID) ?>">
 				<?php echo get_the_title($featured_post->ID) ?>
+				<br>
 				<span>Read full article...</span>
 			</a>
 		</h2>
@@ -42,11 +43,17 @@ $home_posts_exclude = []; ?>
 	if( $banner_post ) :
 	array_push($home_posts_exclude, $banner_post->ID); // add post to exclude array ?>
 	<a href="<?php the_permalink($banner_post->ID) ?>" class="banner-post">
-		<?php echo get_the_category_list(); ?>
-		<h2 class="banner-post__title">
-			<?php echo get_the_title($banner_post->ID) ?>
-		</h2>
-		<?php echo get_the_post_thumbnail($featured_post->ID, 'banner-image'); ?>
+		<div class="banner-post__contents">
+			<div class="banner-post__meta">
+				<?php echo strip_tags(get_the_category_list(' / ', '', $banner_post->ID)); ?>
+			</div>
+			<h2 class="banner-post__title">
+				<?php echo get_the_title($banner_post->ID) ?>
+			</h2>
+		</div>
+		<div class="banner-post__image">
+			<?php echo get_the_post_thumbnail($featured_post->ID, 'banner-image'); ?>
+		</div>
 	</a>
 	<?php endif; ?>
 

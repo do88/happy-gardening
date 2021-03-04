@@ -43,8 +43,10 @@ $mq-show-breakpoints: (mobile, mobileLarge, tablet, desktop, desktopLarge);
 @import "./layouts/header";
 @import "./layouts/content";
 @import "./layouts/footer";
+@import "./layouts/home-page";
 
 // ===============================================================
 // Modules
 // ===============================================================
 @import "./modules/ninja-form";
+@import "./modules/post-card";

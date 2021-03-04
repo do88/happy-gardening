@@ -1,5 +1,7 @@
 <div class="post-card">
-	<?php the_post_thumbnail('post-thumb'); ?>
+	<a href="<?php the_permalink(); ?>" class="post-card__image">
+		<?php the_post_thumbnail('post-thumb'); ?>
+	</a>
 	<div class="post-card__content">
 		<?php echo get_the_category_list(); ?>
 		<h3 class="post-card__title">

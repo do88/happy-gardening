@@ -139,7 +139,7 @@ body.menu-active {
 	background: none;
 	padding: 0;
 	height: 40px;
-	width: 40px;
+	min-width: 40px;
 	z-index: $z-index-header;
 	transition: opacity 0.25s ease;
 
@@ -152,21 +152,21 @@ body.menu-active {
 	&.active {
 		.top {
 			transform: translateY(10px) translateX(0) rotate(45deg);
-			background: $color-black;
+			background: $color-primary;
 		}
 		.middle {
 			opacity: 0;
-			background: $color-black;
+			background: $color-primary;
 		}
 
 		.bottom {
 			transform: translateY(-10px) translateX(0) rotate(-45deg);
-			background: $color-black;
+			background: $color-primary;
 		}
 	}
 
 	span {
-		background: $color-black;
+		background: $color-primary;
 		border: none;
 		height: 3px;
 		width: 100%;
@@ -189,7 +189,7 @@ body.menu-active {
 #overlay {
 	z-index: $z-index-menu;
 	position: fixed;
-	background: $color-black;
+	background: $color-primary;
 	top: $mobile-header-height;
 	left: auto;
 	right: 0;
@@ -227,11 +227,11 @@ body.menu-active {
 		}
 		> .menu-item a {
 			display: block;
-			margin-bottom: var(--space-large);
-			padding-bottom: var(--space-large);
-			color: $color-white;
+			margin-bottom: var(--space-small);
+			padding-bottom: var(--space-small);
+			color: $color-third;
 			text-decoration: none;
-			font-size: var(--font-small);
+			font-size: var(--font-medium);
 			letter-spacing: 2px;
 			border-bottom: 1px solid rgba(white, 0.2);
 		}

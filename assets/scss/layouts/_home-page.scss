@@ -1,0 +1,166 @@
+// ===============================================================
+// Homepage banner
+// ===============================================================
+
+.home-banner {
+	position: relative;
+	text-align: center;
+
+	.home-banner__title {
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 10%;
+		transform: translateX(-50%);
+		width: 90%;
+		height: auto;
+		z-index: 2;
+
+		a {
+			font-size: var(--font-xxlarge);
+			font-family: $font-secondary;
+			color: $color-third;
+			font-weight: bold;
+			line-height: 1;
+		}
+
+		span {
+			font-weight: normal;
+			font-size: var(--font-medium);
+			font-family: $font-primary;
+			border-bottom: 1px solid $color-third;
+			padding-bottom: 0.5rem;
+			line-height: 1;
+		}
+	}
+
+	.home-banner__image {
+		position: relative;
+		min-height: 400px;
+
+		@include mq(mobileLarge) {
+			min-height: 300px;
+		}
+
+		img {
+			@include absolute-center;
+			object-fit: cover;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(0deg, rgba(#090e04, 1) 0%, rgba(#090e04, 0.5) 50%, rgba(#090e04, 0) 100%);
+			mix-blend-mode: multiply;
+		}
+	}
+}
+
+// ===============================================================
+// Home seperator title
+// ===============================================================
+
+.home-title {
+	font-size: var(--font-xlarge);
+	font-family: $font-secondary;
+	color: $color-primary;
+	text-align: center;
+	font-weight: bold;
+	line-height: 1.33;
+	margin: var(--space-large);
+}
+
+// ===============================================================
+// Featured posts
+// ===============================================================
+
+.featured-posts {
+	padding: 0 var(--space-large);
+	display: grid;
+	grid-gap: var(--space-large);
+	margin-bottom: var(--space-large);
+
+	@include mq(tablet) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+// ===============================================================
+// Banner post
+// ===============================================================
+
+.banner-post {
+	position: relative;
+	display: block;
+	margin-bottom: var(--space-large);
+
+	.banner-post__contents {
+		text-align: center;
+		z-index: 2;
+		display: block;
+		position: absolute;
+		left: 50%;
+		bottom: 10%;
+		transform: translateX(-50%);
+		width: 90%;
+	}
+
+	.banner-post__meta {
+		color: $color-white;
+	}
+
+	.banner-post__title {
+		font-size: var(--font-xxlarge);
+		font-family: $font-secondary;
+		color: $color-white;
+		font-weight: bold;
+		line-height: 1.33;
+	}
+
+	.banner-post__image {
+		position: relative;
+		min-height: 400px;
+
+		@include mq(mobileLarge) {
+			min-height: 300px;
+		}
+
+		img {
+			@include absolute-center;
+			object-fit: cover;
+		}
+
+		&::after {
+			z-index: 1;
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(0deg, rgba(#090e04, 0.7) 0%, rgba(#090e04, 0) 50%, rgba(#090e04, 0) 100%);
+			mix-blend-mode: multiply;
+		}
+	}
+}
+
+// ===============================================================
+// Recent posts
+// ===============================================================
+
+.latest-posts {
+	padding: 0 var(--space-large);
+	display: grid;
+	grid-gap: var(--space-large);
+	margin-bottom: var(--space-large);
+
+	@include mq(tablet) {
+		grid-template-columns: 1fr 1fr;
+	}
+}
