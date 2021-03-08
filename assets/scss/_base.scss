@@ -195,12 +195,7 @@ p {
 	@include transition();
 
 	&:hover {
-		background: $color-third;
-		color: $color-primary;
-
-		.svg-wrapper svg {
-			fill: $color-primary;
-		}
+		background: $color-secondary;
 	}
 
 	.svg-wrapper {

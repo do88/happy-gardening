@@ -7,17 +7,32 @@
 	flex-flow: column;
 }
 
+.post-card__link {
+	flex: 1;
+	display: flex;
+	flex-flow: column;
+
+	&:hover {
+		.post-card__image img {
+			transform: scale(1.05);
+		}
+
+		.post-card__content {
+			background: $color-primary;
+		}
+
+		.post-card__meta,
+		.post-card__title {
+			color: $color-white;
+		}
+	}
+}
+
 .post-card__image {
 	overflow: hidden;
 
-	&:hover {
-		img {
-			transform: scale(1.05);
-		}
-	}
-
 	img {
-		@include transition(0.5s);
+		@include transition(1s);
 	}
 }
 
@@ -27,12 +42,16 @@
 	flex-flow: column;
 	background: $color-third;
 	padding: var(--space-small);
+	@include transition(0.5s);
 }
 
 .post-categories {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
+	padding: var(--space-xxsmall) var(--space-small);
+	background: darken($color-third, 10%);
+	background: $color-third;
 
 	li {
 		margin-right: 1rem;
@@ -41,30 +60,14 @@
 		&:not(:last-child):after {
 			content: "/";
 			margin-left: 1rem;
+			color: $color-primary;
 		}
 	}
 
 	a {
 		white-space: nowrap;
-		color: $color-secondary;
-		font-size: var(--font-small);
-		@include transition(0.5s);
-
-		&:hover {
-			color: $color-primary;
-		}
-	}
-}
-
-.post-card__title {
-	margin-bottom: 2rem;
-
-	a {
-		font-size: var(--font-large);
-		font-family: $font-secondary;
 		color: $color-primary;
-		font-weight: bold;
-		line-height: 1.33;
+		font-size: var(--font-xsmall);
 		@include transition(0.5s);
 
 		&:hover {
@@ -73,11 +76,22 @@
 	}
 }
 
+.post-card__title {
+	margin-bottom: 1rem;
+	font-size: var(--font-large);
+	font-family: $font-secondary;
+	color: $color-primary;
+	font-weight: bold;
+	line-height: 1.33;
+	@include transition(0.5s);
+}
+
 .post-card__meta {
 	display: flex;
 	margin-top: auto;
 	color: $color-secondary;
 	white-space: nowrap;
+	@include transition(0.5s);
 
 	.post-card__date {
 		margin-right: 1.25rem;
