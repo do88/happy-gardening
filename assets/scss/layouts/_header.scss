@@ -3,7 +3,6 @@
 // ===============================================================
 
 .header {
-
 	.header__wrapper {
 		padding: 0 var(--space-xxlarge);
 		display: flex;
@@ -19,8 +18,12 @@
 	.header__logo {
 		display: inline-block;
 		flex: 0 1 310px;
-		height: 55px;
+		height: 40px;
 		margin-right: var((--space-medium));
+
+		@include mq(tablet) {
+			height: 55px;
+		}
 	}
 
 	.header__menu-button {

@@ -4,106 +4,50 @@
 
 .site-footer {
 	margin-top: var(--space-large);
-	background: $color-white;
+	background: $color-third;
+	padding: var(--space-small) var(--space-large);
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 
-	.site-footer__wrapper {
-		@include constrain($max-width-large);
-		padding-top: var(--space-medium);
-		padding-bottom: var(--space-medium);
-		display: flex;
-		flex-flow: column;
-		align-items: center;
+	@include mq(tablet) {
+		flex-flow: row;
+	}
+}
 
-		@include mq(desktop) {
-			justify-content: space-between;
-			flex-flow: row;
-		}
+.site-footer__info {
+	line-height: 1;
 
-		> * {
-			margin: var(--space-large) 0;
-		}
+	.svg-wrapper {
+		width: 190px;
+		height: 34px;
 	}
 
-	.footer-social {
-		display: flex;
-		align-items: center;
-		white-space: nowrap;
-
-		a {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			width: 50px;
-			height: 50px;
-			margin-left: var(--space-medium);
-			background: $color-black;
-			@include transition;
-
-			&:hover {
-				background: $color-third;
-			}
-		}
-
-		.svg-wrapper {
-			width: 25px;
-			height: 25px;
-			svg {
-				fill: $color-white;
-			}
-		}
+	p {
+		margin: 0;
+		font-size: var(--font-xsmall);
 	}
 
-	.footer-logos {
-		display: flex;
-		flex-flow: column;
-		align-items: center;
+	@include mq(tablet) {
+		margin-right: auto;
+	}
+}
 
-		@include mq(tablet) {
-			flex-flow: row;
-		}
+#footer-nav {
+	list-style: none;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin: var(--space-medium) 0;
 
-		> * {
-			margin: var(--space-medium) 0;
-			max-width: 250px;
-
-			@include mq(tablet) {
-				margin: 0 var(--space-medium);
-			}
-		}
-
-		.svg-wrapper {
-			height: 40px;
-		}
+	@include mq(tablet) {
+		flex-flow: row;
+		margin: 0 var(--space-medium) 0 0;
 	}
 
-	.site-footer__info {
-		padding-top: var(--space-medium);
-		padding-bottom: var(--space-medium);
-		background: $color-black;
-
-		.site-footer__info-wrapper {
-			@include constrain($max-width-large);
-			display: flex;
-			flex-flow: column;
-			align-items: center;
-			text-transform: uppercase;
-			letter-spacing: 0.05rem;
-
-			@include mq(tablet) {
-				flex-flow: row;
-				justify-content: space-between;
-			}
-
-			> * {
-				margin: var(--space-small) 0;
-				line-height: 1;
-				color: $color-white;
-				font-style: var(--font-small);
-
-				@include mq(tablet) {
-					margin: 0 var(--space-small);
-				}
-			}
-		}
+	a {
+		color: $color-primary;
+		margin: 0.5rem;
+		padding: 1rem;
 	}
 }

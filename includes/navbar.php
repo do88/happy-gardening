@@ -16,7 +16,7 @@ function switch_top_nav()
         'menu_id' => 'main-nav', // Adding custom nav id
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
         'theme_location' => 'main-nav', // Where it's located in the theme
-        'depth' => 2, // Limit the depth of the nav
+        'depth' => 1, // Limit the depth of the nav
         'fallback_cb' => false, // Fallback function (see below)
     ));
 }
@@ -28,7 +28,7 @@ function switch_top_nav_mobile()
         'menu_id' => 'main-nav-mobile', // Adding custom nav id
         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
         'theme_location' => 'main-nav', // Where it's located in the theme
-        'depth' => 2, // Limit the depth of the nav
+        'depth' => 1, // Limit the depth of the nav
         'fallback_cb' => false, // Fallback function (see below)
     ));
 }

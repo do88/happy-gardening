@@ -1,22 +1,20 @@
 <footer class="site-footer">
-	<div class="site-footer__wrapper">
-		<div class="footer-social">
-			Connect with us
-			<a href="https://twitter.com/amcash_testing?lang=en"><?php load_inline_svg('twitter') ?></a>
-			<a href="https://www.linkedin.com/company/amcash/"><?php load_inline_svg('linkedin-in') ?></a>
-		</div>
-		<div class="footer-logos">
-			<span><?php load_inline_svg('switch-logo') ?></span>
-		</div>
-	</div>
 	<div class="site-footer__info">
-		<div class="site-footer__info-wrapper">
-			<p>&copy; Switch Baseplate <?php echo date('Y'); ?></p>
-			<a href="https://weareswitch.com/">Website by switch</a>
-		</div>
+		<?php load_inline_svg('logo') ?>
+		<p>Copyright <?php echo get_bloginfo('name') . ' &copy; ' .  date('Y'); ?></p>
 	</div>
+	<?php wp_nav_menu(array(
+        'container' => false, // Remove nav container
+        'menu_id' => 'footer-nav', // Adding custom nav id
+        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+        'theme_location' => 'main-nav', // Where it's located in the theme
+        'depth' => 1, // Limit the depth of the nav
+        'fallback_cb' => false, // Fallback function (see below)
+	)); ?>
+	<a href="https://twitter.com/amcash_testing?lang=en" class="site-footer__social button">
+		Find us on instagram <?php load_inline_svg('twitter') ?>
+	</a>
 </footer>
-</div>
 
 <?php wp_footer(); ?>
 
