@@ -1,5 +1,5 @@
 // ===============================================================
-// Generic page banner
+// Post banner
 // ===============================================================
 
 .banner {
@@ -18,6 +18,7 @@
 	z-index: 2;
 
 	@include mq(desktop) {
+		bottom: 6%;
 		width: 70%;
 	}
 
@@ -54,6 +55,10 @@
 		font-weight: bold;
 		line-height: 1;
 		margin-bottom: 1rem;
+
+		@include mq(desktop) {
+			margin-bottom: 2rem;
+		}
 	}
 }
 
@@ -69,8 +74,12 @@
 .banner__meta {
 	display: flex;
 	justify-content: center;
-	color: $color-white;
+	color: $color-third;
 	margin-top: 2rem;
+
+	@include mq(desktop) {
+		margin-top: 3rem;
+	}
 
 	.banner__date {
 		margin-right: 2rem;
@@ -110,5 +119,34 @@
 		height: 100%;
 		background: linear-gradient(0deg, rgba(#090e04, 1) 0%, rgba(#090e04, 0.5) 70%, rgba(#090e04, 0) 100%);
 		mix-blend-mode: multiply;
+
+		@include mq(desktop) {
+			background: linear-gradient(0deg, rgba(#090e04, 1) 0%, rgba(#090e04, 0.5) 50%, rgba(#090e04, 0) 100%);
+		}
+	}
+}
+
+// ===============================================================
+// Banner for pages
+// ===============================================================
+
+.banner--page {
+	.banner__title {
+		top: 50%;
+		bottom: auto;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@include mq(desktop) {
+			width: 70%;
+		}
+
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+
+	.banner__image {
+		min-height: 300px;
 	}
 }

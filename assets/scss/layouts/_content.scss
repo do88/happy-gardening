@@ -36,6 +36,17 @@
 		font-size: var(--font-large);
 		color: $color-primary;
 		line-height: 1.33;
+
+		@include mq(mobileLarge) {
+			text-align: center;
+			margin: 0 calc(var(--space-medium) * -1);
+		}
+
+		@include mq(desktop) {
+			font-size: 3.2rem;
+			line-height: 1.22;
+			margin: 0 calc(var(--space-xxlarge) * -1);
+		}
 	}
 
 	// Set vertical rhythm for page content
@@ -45,28 +56,31 @@
 
 	a {
 		text-decoration: none;
-		color: $color-third;
+		color: $color-primary;
 		font-weight: 400;
 		border-bottom: 2px solid transparent;
 		@include transition;
 
 		&:hover {
-			color: $color-black;
-			border-bottom: 2px solid $color-black;
+			color: $color-secondary;
+			border-bottom: 2px solid $color-secondary;
 		}
 	}
 
 	h2 {
+		font-family: $font-secondary;
+		color: $color-primary;
 		font-weight: 700;
 	}
 
 	h3 {
-		font-weight: 400;
+		color: $color-primary;
+		font-weight: 700;
 	}
 
 	h4 {
-		color: $color-third;
-		font-weight: 400;
+		color: $color-secondary;
+		font-weight: 700;
 	}
 
 	ul {
@@ -134,6 +148,26 @@
 			color: $color-primary;
 			font-size: var(--font-large);
 			line-height: 1.44;
+		}
+	}
+
+	figure {
+		margin: var(--space-large) calc(var(--space-large) * -1) !important;
+
+		@include mq(desktop) {
+			margin: var(--space-large) calc(var(--space-xlarge) * -1) !important;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		figcaption {
+			margin: 0;
+			padding: 0.5rem;
+			background: $color-third;
+			font-size: var(--font-xsmall);
+			color: $color-primary;
 		}
 	}
 
