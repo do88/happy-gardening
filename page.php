@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<?php get_template_part( 'templates/parts/banner'); ?>
 
 <main id="primary" class="content">
+	<?php get_template_part( 'templates/parts/banner'); ?>
 
 	<div class="content--contained content--two-column-sidebar">
 		<div class="page-content">
@@ -9,11 +9,7 @@
 			<?php the_content(); ?>
 			<?php endwhile;  endif;?>
 		</div>
-		<div>
-			<?php get_sidebar(); ?>
-		</div>
 	</div>
-
 </main>
 
 <?php get_footer(); ?>

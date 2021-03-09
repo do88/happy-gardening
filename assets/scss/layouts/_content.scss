@@ -5,8 +5,8 @@
 // Layout styling rules
 .content {
 	.content--contained {
-		@include constrain($max-width-large);
-		margin-bottom: var(--space-xxlarge);
+		@include constrain($max-width-small);
+		margin: var(--space-xlarge) auto;
 	}
 
 	.content--two-column {
@@ -32,9 +32,11 @@
 
 // Styling for any content output from the wordpress editor
 .page-content {
-	background: $color-white;
-	padding: var(--space-xlarge);
-	@include box-shadow-large();
+	.page-intro {
+		font-size: var(--font-large);
+		color: $color-primary;
+		line-height: 1.33;
+	}
 
 	// Set vertical rhythm for page content
 	> *:not(:last-child) {
@@ -68,7 +70,7 @@
 	}
 
 	ul {
-		font-style: var(--font-small);
+		font-size: var(--font-small);
 
 		li {
 			list-style: none;
@@ -98,7 +100,7 @@
 	}
 
 	ol {
-		font-style: var(--font-small);
+		font-size: var(--font-small);
 		list-style-position: inside;
 
 		li {
@@ -115,6 +117,24 @@
 
 	em {
 		border: 0;
+	}
+
+	blockquote {
+		border: none;
+		background: $color-third;
+		padding: var(--space-small);
+		text-align: center;
+		margin: 0 calc(var(--space-large) * -1);
+
+		@include mq(desktop) {
+			margin: 0 calc(var(--space-xlarge) * -1);
+		}
+
+		p {
+			color: $color-primary;
+			font-size: var(--font-large);
+			line-height: 1.44;
+		}
 	}
 
 	.two-column-grid {
@@ -136,7 +156,7 @@
 
 		.wp-caption-text {
 			padding-top: var(--space-small);
-			font-style: var(--font-small);
+			font-size: var(--font-small);
 		}
 	}
 }

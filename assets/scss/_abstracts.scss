@@ -6,7 +6,7 @@
 	width: 100%;
 	max-width: 500px;
 	margin: 0 auto;
-	padding: 0 var(--space-medium);
+	padding: 0 var(--space-large);
 
 	@include mq(mobileLarge) {
 		max-width: 700px;
@@ -83,8 +83,8 @@ $mobile-header-height: 85px;
 $desktop-header-height: 100px;
 
 // Layout
-$max-width-small: 45em; // 720px
-$max-width-large: 81.25em; // 1300px
+$max-width-small: (720 / 16) * 1em;
+$max-width-large: (1300 / 16) * 1em;
 
 // Z-Index
 $z-index-header: 50;

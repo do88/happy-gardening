@@ -32,8 +32,8 @@
 				<span class="bottom"></span>
 			</button>
 		</div>
-	</header>
 
-	<nav class="header__menu header__menu--mobile" id="overlay" aria-expanded="false">
-		<?php switch_top_nav_mobile() ?>
-	</nav>
+		<nav class="header__menu header__menu--mobile" id="overlay" aria-expanded="false">
+			<?php switch_top_nav_mobile() ?>
+		</nav>
+	</header>
