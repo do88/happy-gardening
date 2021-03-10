@@ -4,6 +4,12 @@
 
 // Layout styling rules
 .content {
+	margin-top: $mobile-header-height;
+
+	@include mq(desktop) {
+		height: $desktop-header-height;
+	}
+
 	.content--contained {
 		@include constrain($max-width-small);
 		margin: var(--space-xlarge) auto;
@@ -85,26 +91,17 @@
 
 	ul {
 		font-size: var(--font-small);
+		list-style-position: outside;
+		margin-left: 2.5rem;
 
 		li {
-			list-style: none;
 			position: relative;
-			padding: 0 0 0 20px;
 			margin-bottom: var(--space-xsmall);
 			padding-bottom: var(--space-xsmall);
 			border-bottom: 1px solid rgba(black, 0.1);
 
-			&:before {
-				content: "";
-				position: absolute;
-				left: 5px;
-				top: 10px;
-				width: 7px;
-				height: 7px;
-				background-color: $color-secondary;
-				border-radius: 50%;
-				-moz-border-radius: 50%;
-				-webkit-border-radius: 50%;
+			&::marker {
+				color: $color-primary;
 			}
 		}
 
@@ -115,13 +112,19 @@
 
 	ol {
 		font-size: var(--font-small);
-		list-style-position: inside;
+		list-style-position: outside;
+		margin-left: 2.5rem;
 
 		li {
 			position: relative;
 			margin-bottom: var(--space-xsmall);
 			padding-bottom: var(--space-xsmall);
 			border-bottom: 1px solid rgba(black, 0.1);
+
+			&::marker {
+				color: $color-primary;
+				font-weight: bold;
+			}
 		}
 
 		&:last-child {
