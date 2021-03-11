@@ -283,4 +283,44 @@
 }
 
 .post-meta {
+	margin: var(--space-large) 0;
+	padding: var(--space-small) 0;
+	border-top: 1px dotted $color-primary;
+	border-bottom: 1px dotted $color-primary;
+
+	.categories {
+		display: flex;
+		border: 0;
+
+		.post-categories {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				margin-right: 1rem;
+
+				&:not(:last-child):after {
+					content: "/";
+					margin-left: 1rem;
+					color: $color-primary;
+				}
+			}
+
+			a {
+				white-space: nowrap;
+				color: $color-primary;
+				font-size: var(--font-xsmall);
+				@include transition(0.5s);
+
+				&:hover {
+					color: $color-secondary;
+				}
+			}
+		}
+	}
+
+	.tags {
+		border: 0;
+	}
 }
