@@ -197,3 +197,90 @@
 		}
 	}
 }
+
+// Styling for related article
+.related-article {
+	margin: var(--space-large) 0;
+
+	.related-article__header {
+		font-weight: bold;
+		color: $color-primary;
+		margin-bottom: 2rem;
+	}
+
+	.related-article__link {
+		display: block;
+		position: relative;
+
+		&:hover {
+			.related-article__image img {
+				transform: scale(1.05);
+			}
+
+			.related-article__content {
+				background: $color-primary;
+			}
+
+			.related-article__meta,
+			.related-article__title {
+				color: $color-white;
+			}
+		}
+	}
+
+	.related-article__content {
+		background: $color-third;
+		padding: var(--space-medium);
+		@include transition(0.5s);
+
+		@include mq(mobileLarge) {
+			right: 0;
+			top: 50%;
+			width: 60%;
+			transform: translateY(-50%);
+			position: absolute;
+		}
+	}
+
+	.related-article__meta {
+		display: flex;
+		margin-top: auto;
+		color: $color-secondary;
+		white-space: nowrap;
+		margin-top: 1rem;
+		@include transition(0.5s);
+
+		.post-card__date {
+			margin-right: 1.25rem;
+		}
+
+		.rt-label.rt-postfix,
+		.rt-time,
+		time {
+			font-weight: bold;
+		}
+	}
+
+	.related-article__title {
+		color: $color-primary;
+		font-family: $font-secondary;
+		font-weight: bold;
+		line-height: 1;
+		@include transition(0.5s);
+	}
+
+	.related-article__image {
+		overflow: hidden;
+
+		@include mq(mobileLarge) {
+			width: 70%;
+		}
+
+		img {
+			@include transition(0.5s);
+		}
+	}
+}
+
+.post-meta {
+}

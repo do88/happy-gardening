@@ -124,6 +124,21 @@ html,body{scroll-padding-top:105px}
 }.page-content .two-column-grid>div>*:not(:last-child){margin-bottom:var(--space-medium)}
 .page-content .wp-caption{width:100% !important}
 .page-content .wp-caption .wp-caption-text{padding-top:var(--space-small);font-size:var(--font-small)}
+.related-article{margin:var(--space-large) 0}
+.related-article .related-article__header{font-weight:bold;color:#074129;margin-bottom:2rem}
+.related-article .related-article__link{display:block;position:relative}
+.related-article .related-article__link:hover .related-article__image img{-webkit-transform:scale(1.05);transform:scale(1.05)}
+.related-article .related-article__link:hover .related-article__content{background:#074129}
+.related-article .related-article__link:hover .related-article__meta,.related-article .related-article__link:hover .related-article__title{color:#fff}
+.related-article .related-article__content{background:#faf2df;padding:var(--space-medium);-webkit-transition:all .5s ease-out;transition:all .5s ease-out}
+@media(min-width:37.5em){.related-article .related-article__content{right:0;top:50%;width:60%;-webkit-transform:translateY(-50%);transform:translateY(-50%);position:absolute}
+}.related-article .related-article__meta{display:-webkit-box;display:-ms-flexbox;display:flex;margin-top:auto;color:#654b10;white-space:nowrap;margin-top:1rem;-webkit-transition:all .5s ease-out;transition:all .5s ease-out}
+.related-article .related-article__meta .post-card__date{margin-right:1.25rem}
+.related-article .related-article__meta .rt-label.rt-postfix,.related-article .related-article__meta .rt-time,.related-article .related-article__meta time{font-weight:bold}
+.related-article .related-article__title{color:#074129;font-family:"Playfair Display",serif;font-weight:bold;line-height:1;-webkit-transition:all .5s ease-out;transition:all .5s ease-out}
+.related-article .related-article__image{overflow:hidden}
+@media(min-width:37.5em){.related-article .related-article__image{width:70%}
+}.related-article .related-article__image img{-webkit-transition:all .5s ease-out;transition:all .5s ease-out}
 .site-footer{margin-top:var(--space-large);background:#faf2df;padding:var(--space-small) var(--space-large);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 @media(min-width:50em){.site-footer{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row;flex-flow:row}
 }.site-footer__info{line-height:1}
