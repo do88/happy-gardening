@@ -12,7 +12,12 @@ require get_template_directory() . '/includes/enqueues.php';
 require get_template_directory() . '/includes/setup.php';
 require get_template_directory() . '/includes/navbar.php';
 require get_template_directory() . '/includes/svg-loader.php';
-require get_template_directory() . '/includes/disable-comments.php';
+// require get_template_directory() . '/includes/disable-comments.php';
+
+function comment_support_for_my_custom_post_type() {
+	add_post_type_support( 'my_post_type', 'comments' );
+}
+add_action( 'init', 'comment_support_for_my_custom_post_type' );
 
 // TGM Register Required Plugins
 require get_template_directory() . '/includes/tgm/class-tgm-plugin-activation.php';

@@ -40,14 +40,22 @@
 
 		<section class="post-meta">
 			<div class="categories">
-				Categories:
+				<span class="title">
+					Categories:
+				</span>
 				<?php echo get_the_category_list(); ?>
 			</div>
 			<div class="tags">
-				Tags:
+				<span class="title">
+					Tags:
+				</span>
 				<?php echo get_the_tag_list() ?>
 			</div>
 		</section>
+
+		<div class="comments">
+			<?php comments_template() ?>
+		</div>
 	</div>
 </main>
 
