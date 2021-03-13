@@ -32,6 +32,7 @@
 	overflow: hidden;
 
 	img {
+		width: 100%;
 		@include transition(1s);
 	}
 }
@@ -50,8 +51,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding: var(--space-xxsmall) var(--space-small);
-	background: darken($color-third, 10%);
-	background: $color-third;
+	background-color: rgba($color-primary, 0.075);
 
 	li {
 		margin-right: 1rem;
@@ -60,18 +60,19 @@
 		&:not(:last-child):after {
 			content: "/";
 			margin-left: 1rem;
-			color: $color-primary;
+			color: $color-secondary;
 		}
 	}
 
 	a {
-		white-space: nowrap;
-		color: $color-primary;
-		font-size: var(--font-xsmall);
+		display: inline-block;
+		padding: 0.25rem 0;
+		color: $color-secondary;
+		font-size: 1.6rem;
 		@include transition(0.5s);
 
 		&:hover {
-			color: $color-secondary;
+			color: $color-primary;
 		}
 	}
 }
@@ -88,6 +89,7 @@
 
 .post-card__meta {
 	display: flex;
+	flex-wrap: wrap;
 	margin-top: auto;
 	color: $color-secondary;
 	white-space: nowrap;

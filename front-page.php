@@ -21,12 +21,12 @@ $home_posts_exclude = []; ?>
 		</div>
 	</div>
 
-	<h2 class="home-title">The latest from our blog</h2>
-
 	<?php /* ================================= Secondary featured posts */ ?>
 
 	<?php $secondary_featured_posts = get_field('secondary_featured_posts');
 	if( $secondary_featured_posts ) : ?>
+
+	<h2 class="home-title">Featured posts</h2>
 	<div class="featured-posts">
 		<?php foreach( $secondary_featured_posts as $post ):
 			setup_postdata($post);
@@ -59,6 +59,7 @@ $home_posts_exclude = []; ?>
 
 	<?php /* ================================= Latest posts */ ?>
 
+	<h2 class="home-title">The latest from the blog</h2>
 	<div class="latest-posts">
 		<?php $args = array(
 			'post_type' => 'post',

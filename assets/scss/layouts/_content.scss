@@ -12,7 +12,7 @@
 
 	.content--contained {
 		@include constrain($max-width-small);
-		margin: var(--space-xlarge) auto;
+		margin: var(--space-xlarge) auto 0;
 	}
 
 	.content--two-column {
@@ -140,34 +140,50 @@
 		border: none;
 		background: $color-third;
 		padding: var(--space-small);
-		text-align: center;
 		margin: 0 calc(var(--space-large) * -1);
 
 		@include mq(desktop) {
+			padding: var(--space-medium);
 			margin: 0 calc(var(--space-xlarge) * -1);
 		}
 
 		p {
 			color: $color-primary;
 			font-size: var(--font-large);
-			line-height: 1.44;
+			line-height: 1.33;
+			margin-bottom: var(--space-medium);
+		}
+
+		cite {
+			margin: 0 !important;
+		}
+	}
+
+	.wp-block-gallery {
+		.blocks-gallery-item {
+			border: 0;
+			padding: 0;
 		}
 	}
 
 	figure {
-		margin: var(--space-large) calc(var(--space-large) * -1) !important;
+		margin-left: calc(var(--space-large) * -1);
+		margin-right: calc(var(--space-large) * -1);
 
 		@include mq(desktop) {
-			margin: var(--space-large) calc(var(--space-xlarge) * -1) !important;
+			margin-left: calc(var(--space-xlarge) * -1);
+			margin-right: calc(var(--space-xlarge) * -1);
 		}
 
 		img {
 			width: 100%;
+			margin: auto;
 		}
 
 		figcaption {
+			line-height: 1.33;
 			margin: 0;
-			padding: 0.5rem;
+			padding: 1.25rem 2rem;
 			background: $color-third;
 			font-size: var(--font-xsmall);
 			color: $color-primary;
@@ -176,7 +192,7 @@
 
 	.two-column-grid {
 		display: grid;
-		grid-gap: 20px;
+		grid-gap: var(--grid-gap);
 		grid-template-columns: 1fr;
 
 		@include mq(desktop) {
@@ -355,4 +371,8 @@
 			}
 		}
 	}
+}
+
+#comments {
+	margin: 0 auto 0;
 }

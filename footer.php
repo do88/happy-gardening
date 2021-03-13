@@ -11,8 +11,8 @@
         'depth' => 1, // Limit the depth of the nav
         'fallback_cb' => false, // Fallback function (see below)
 	)); ?>
-	<a href="https://twitter.com/amcash_testing?lang=en" class="site-footer__social button">
-		Find us on instagram <?php load_inline_svg('twitter') ?>
+	<a href="https://www.instagram.com/happy_gardening.uk/" targe="_blank" class="site-footer__social button">
+		Get social <?php load_inline_svg('instagram') ?>
 	</a>
 </footer>
 

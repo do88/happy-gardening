@@ -36,7 +36,7 @@
 			&:not(:last-child):after {
 				content: "/";
 				margin-left: 1rem;
-				color: $color-primary;
+				color: $color-third;
 			}
 		}
 
@@ -45,6 +45,10 @@
 			color: $color-white;
 			font-size: var(--font-small);
 			@include transition(0.5s);
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
@@ -121,7 +125,7 @@
 		mix-blend-mode: multiply;
 
 		@include mq(desktop) {
-			background: linear-gradient(0deg, rgba(#090e04, 1) 0%, rgba(#090e04, 0.5) 50%, rgba(#090e04, 0) 100%);
+			background: linear-gradient(0deg, rgba(#090e04, 1) 0%, rgba(#090e04, 0.2) 40%, rgba(#090e04, 0) 100%);
 		}
 	}
 }

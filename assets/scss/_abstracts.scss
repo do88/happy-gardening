@@ -6,15 +6,15 @@
 	width: 100%;
 	max-width: 500px;
 	margin: 0 auto;
-	padding: 0 var(--space-large);
+	padding: 0 var(--space-xlarge);
 
 	@include mq(mobileLarge) {
 		max-width: 700px;
-		padding: 0 var(--space-large);
+		padding: 0 var(--space-xlarge);
 	}
 
 	@include mq(tablet) {
-		padding: 0 var(--space-large);
+		padding: 0 var(--space-xlarge);
 		max-width: $width;
 	}
 
@@ -143,13 +143,26 @@ $z-index-modal: 999;
 		--font-xxlarge: 6.8rem;
 	}
 
+	@include mq(desktopLarge) {
+		--font-xxsmall: 1.7rem;
+		--font-xsmall: 1.9rem;
+		--font-small: 2.3rem;
+		--font-medium: 2.7rem;
+		--font-large: 3.4rem;
+		--font-xlarge: 3.9rem;
+		--font-xxlarge: 7.2rem;
+	}
+
 	// CSS grid gap
-	--grid-gap: 1.5rem;
+	--grid-gap: 3rem;
 
 	@include mq(tablet) {
-		--grid-gap: 2.5rem;
+		--grid-gap: 4.5rem;
 	}
 	@include mq(desktop) {
-		--grid-gap: 4rem;
+		--grid-gap: 6rem;
+	}
+	@include mq(desktopLarge) {
+		--grid-gap: 7rem;
 	}
 }

@@ -90,7 +90,7 @@
 	text-align: center;
 	font-weight: bold;
 	line-height: 1.33;
-	margin: var(--space-large);
+	margin: 8vh;
 }
 
 // ===============================================================
@@ -98,10 +98,10 @@
 // ===============================================================
 
 .featured-posts {
-	padding: 0 var(--space-large);
+	padding: 0 var(--space-xlarge);
 	display: grid;
-	grid-gap: var(--space-large);
-	margin-bottom: var(--space-large);
+	grid-gap: var(--grid-gap);
+	margin-bottom: var(--space-xlarge);
 
 	@include mq(mobileLarge) {
 		grid-template-columns: 1fr 1fr;
@@ -115,10 +115,10 @@
 .banner-post {
 	position: relative;
 	display: block;
-	margin-bottom: var(--space-large);
+	margin-bottom: var(--space-xlarge);
 
 	@include mq(desktop) {
-		margin: 0 var(--space-large) var(--space-large);
+		margin: 0 var(--space-xlarge) var(--space-xlarge);
 	}
 
 	&:hover {
@@ -201,10 +201,10 @@
 // ===============================================================
 
 .latest-posts {
-	padding: 0 var(--space-large);
+	padding: 0 var(--space-xlarge);
 	display: grid;
-	grid-gap: var(--space-large);
-	margin-bottom: var(--space-large);
+	grid-gap: var(--grid-gap);
+	margin-bottom: var(--space-xlarge);
 
 	@include mq(mobileLarge) {
 		grid-template-columns: 1fr 1fr;
