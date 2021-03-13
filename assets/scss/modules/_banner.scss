@@ -8,7 +8,7 @@
 	margin-bottom: var(--space-xxlarge);
 	margin-top: $mobile-header-height;
 
-	@include mq(tablet) {
+	@include mq(desktop) {
 		margin-top: $desktop-header-height;
 	}
 }
@@ -28,6 +28,7 @@
 		width: 70%;
 	}
 
+	body.archive &,
 	body.page &,
 	body.blog & {
 		bottom: auto;
@@ -114,17 +115,23 @@
 	min-height: 400px;
 
 	@include mq(mobileLarge) {
-		min-height: 500px;
+		min-height: 450px;
 	}
 
-	@include mq(desktop) {
+	@include mq(desktopLarge) {
 		min-height: 650px;
 	}
 
+	body.archive &,
 	body.page &,
 	body.blog & {
-		max-height: 350px;
-		min-height: 350px;
+		max-height: 150px;
+		min-height: 150px;
+
+		@include mq(desktop) {
+			max-height: 300px;
+			min-height: 300px;
+		}
 	}
 
 	img {

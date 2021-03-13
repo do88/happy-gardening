@@ -25,11 +25,12 @@
 
 	.header__logo {
 		display: inline-block;
-		flex: 0 1 310px;
+		width: 200px;
 		height: 40px;
 		margin-right: var((--space-medium));
 
 		@include mq(tablet) {
+			width: 310px;
 			height: 55px;
 		}
 	}
@@ -275,7 +276,7 @@ body.menu-active {
 
 .headroom {
 	will-change: transform;
-	transition: transform 200ms linear;
+	transition: transform 400ms ease-in;
 }
 .headroom--pinned {
 	transform: translateY(0%);

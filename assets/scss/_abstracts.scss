@@ -144,12 +144,12 @@ $z-index-modal: 999;
 	}
 
 	@include mq(desktopLarge) {
-		--font-xxsmall: 1.7rem;
-		--font-xsmall: 1.9rem;
-		--font-small: 2.3rem;
-		--font-medium: 2.7rem;
-		--font-large: 3.4rem;
-		--font-xlarge: 3.9rem;
+		--font-xxsmall: 1.6rem;
+		--font-xsmall: 1.8rem;
+		--font-small: 2.2rem;
+		--font-medium: 2.6rem;
+		--font-large: 3rem;
+		--font-xlarge: 3.8rem;
 		--font-xxlarge: 7.2rem;
 	}
 

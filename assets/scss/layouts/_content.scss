@@ -4,13 +4,14 @@
 
 // Layout styling rules
 .content {
-	@include mq(desktop) {
-		height: $desktop-header-height;
-	}
 
 	.content--contained {
 		@include constrain($max-width-small);
 		margin: var(--space-xlarge) auto 0;
+
+		@include mq(desktopLarge) {
+			max-width: 1000px;
+		}
 
 		body.page & {
 			margin: var(--space-xlarge) auto;
@@ -169,8 +170,8 @@
 	}
 
 	figure {
-		margin-left: calc(var(--space-large) * -1);
-		margin-right: calc(var(--space-large) * -1);
+		margin-left: calc(var(--space-xlarge) * -1);
+		margin-right: calc(var(--space-xlarge) * -1);
 
 		@include mq(desktop) {
 			margin-left: calc(var(--space-xlarge) * -1);

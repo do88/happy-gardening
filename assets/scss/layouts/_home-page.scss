@@ -5,6 +5,11 @@
 .home-banner {
 	position: relative;
 	text-align: center;
+	margin-top: $mobile-header-height;
+
+	@include mq(desktop) {
+		margin-top: $desktop-header-height;
+	}
 }
 
 .home-banner__title {
@@ -54,10 +59,10 @@
 	min-height: 400px;
 
 	@include mq(mobileLarge) {
-		min-height: 500px;
+		min-height: 450px;
 	}
 
-	@include mq(desktop) {
+	@include mq(desktopLarge) {
 		min-height: 650px;
 	}
 

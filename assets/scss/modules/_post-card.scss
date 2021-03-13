@@ -60,14 +60,14 @@
 		&:not(:last-child):after {
 			content: "/";
 			margin-left: 1rem;
-			color: $color-secondary;
+			color: #999;
 		}
 	}
 
 	a {
 		display: inline-block;
 		padding: 0.25rem 0;
-		color: $color-secondary;
+		color: #666;
 		font-size: 1.6rem;
 		@include transition(0.5s);
 

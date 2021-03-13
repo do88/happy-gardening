@@ -12,7 +12,7 @@
         'fallback_cb' => false, // Fallback function (see below)
 	)); ?>
 	<a href="https://www.instagram.com/happy_gardening.uk/" targe="_blank" class="site-footer__social button">
-		Get social <?php load_inline_svg('instagram') ?>
+		Follow on Instagram <?php load_inline_svg('instagram') ?>
 	</a>
 </footer>
 
