@@ -31,7 +31,7 @@ $home_posts_exclude = []; ?>
 		<?php foreach( $secondary_featured_posts as $post ):
 			setup_postdata($post);
 			array_push($home_posts_exclude, $post->ID);  // add post to exclude array
-			get_template_part( 'templates/parts/post-card');
+			get_template_part('templates/parts/post-card');
 		endforeach; ?>
 	</div>
 	<?php wp_reset_postdata(); ?>

@@ -5,7 +5,7 @@
 	- [X] blockquotes
 	- [X] general revisions
 - [X] style comments block / remove floating comments button
-- [ ] set up default blog post page
+- [X] set up default blog post page
 - [ ] set up category & tag listing pages
 - [X] split home section up with header for featured articles and some for latest articles
 - [ ] test responsiveness on chrome/safari/firefox

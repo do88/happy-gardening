@@ -5,6 +5,12 @@
 .banner {
 	position: relative;
 	text-align: center;
+	margin-bottom: var(--space-xxlarge);
+	margin-top: $mobile-header-height;
+
+	@include mq(tablet) {
+		margin-top: $desktop-header-height;
+	}
 }
 
 .banner__title {
@@ -20,6 +26,13 @@
 	@include mq(desktop) {
 		bottom: 6%;
 		width: 70%;
+	}
+
+	body.page &,
+	body.blog & {
+		bottom: auto;
+		top: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	.post-categories {
@@ -106,6 +119,12 @@
 
 	@include mq(desktop) {
 		min-height: 650px;
+	}
+
+	body.page &,
+	body.blog & {
+		max-height: 350px;
+		min-height: 350px;
 	}
 
 	img {

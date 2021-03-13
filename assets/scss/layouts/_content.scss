@@ -4,8 +4,6 @@
 
 // Layout styling rules
 .content {
-	margin-top: $mobile-header-height;
-
 	@include mq(desktop) {
 		height: $desktop-header-height;
 	}
@@ -13,6 +11,10 @@
 	.content--contained {
 		@include constrain($max-width-small);
 		margin: var(--space-xlarge) auto 0;
+
+		body.page & {
+			margin: var(--space-xlarge) auto;
+		}
 	}
 
 	.content--two-column {

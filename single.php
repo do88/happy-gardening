@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="primary" class="content">
-	<?php get_template_part( 'templates/parts/banner'); ?>
+	<?php get_template_part('templates/parts/banner', 'single'); ?>
 	<div class="content--contained">
 		<div class="page-content">
 			<?php if (get_field('page_intro')) : ?>

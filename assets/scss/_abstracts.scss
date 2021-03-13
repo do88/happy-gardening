@@ -97,7 +97,7 @@ $z-index-modal: 999;
 
 :root {
 	// Global spacing
-	--space-scale-base: 0.7rem;
+	--space-scale-base: 0.5rem;
 
 	@include mq(mobileLarge) {
 		--space-scale-base: 0.8rem;

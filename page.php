@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="primary" class="content">
-	<?php get_template_part( 'templates/parts/banner', 'page'); ?>
+	<?php get_template_part('templates/parts/banner', 'page'); ?>
 
 	<div class="content--contained">
 		<div class="page-content">
