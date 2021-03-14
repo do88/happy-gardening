@@ -11,7 +11,7 @@
         'depth' => 1, // Limit the depth of the nav
         'fallback_cb' => false, // Fallback function (see below)
 	)); ?>
-	<a href="https://www.instagram.com/happy_gardening.uk/" targe="_blank" class="site-footer__social button">
+	<a href="https://www.instagram.com/happy_gardening.uk/" target="_blank" class="site-footer__social button">
 		Follow on Instagram <?php load_inline_svg('instagram') ?>
 	</a>
 </footer>
