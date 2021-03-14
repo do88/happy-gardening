@@ -4,17 +4,12 @@
 
 // Layout styling rules
 .content {
-
 	.content--contained {
 		@include constrain($max-width-small);
-		margin: var(--space-xlarge) auto 0;
+		margin: 0 auto;
 
 		@include mq(desktopLarge) {
-			max-width: 1000px;
-		}
-
-		body.page & {
-			margin: var(--space-xlarge) auto;
+			max-width: 900px;
 		}
 	}
 
@@ -41,6 +36,8 @@
 
 // Styling for any content output from the wordpress editor
 .page-content {
+	margin-bottom: var(--space-xlarge);
+
 	.page-intro {
 		font-size: var(--font-large);
 		color: $color-primary;
@@ -61,6 +58,10 @@
 	// Set vertical rhythm for page content
 	> *:not(:last-child) {
 		margin-bottom: var(--space-medium);
+	}
+
+	p:empty {
+		display: none;
 	}
 
 	a {
@@ -303,7 +304,7 @@
 }
 
 .post-meta {
-	margin: var(--space-large) 0;
+	margin: 0 auto var(--space-large);
 	padding: var(--space-small) 0;
 	border-top: 1px dotted $color-primary;
 	border-bottom: 1px dotted $color-primary;
@@ -378,4 +379,8 @@
 
 #comments {
 	margin: 0 auto 0;
+}
+
+#wpdcom {
+	max-width: none;
 }
